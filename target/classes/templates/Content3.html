@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html   xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{Template3}"
+>
+
+   
+   <head th:replace="Template3 :: common_header(~{::title},~{::link})">
+
+        <title>DEĞİŞTİRİLDİ TITTILE</title>
+     
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" type="text/css" th:href="@{/resources/css/first.css}" >
+        <link rel="stylesheet" type="text/css" th:href="@{/resources/css/second.css}" >
+        <link rel="stylesheet" type="text/css" th:href="@{/resources/css/fourth.css}" >
+
+ 
+   </head>
+    
+    
+<body>
+     
+    <section  layout:fragment="head">
+        <p>Head content here changed- CONTENT4</p>
+    </section>
+    
+    <section layout:fragment="content">
+      <p>This is a paragraph from content - CONTENT4</p>
+      <p th:text="${message}"></p>
+    </section>
+    
+    <footer>
+      <p layout:fragment="footer">This is some footer content - CONTENT4</p>
+    </footer>
+</body>
+</html>
